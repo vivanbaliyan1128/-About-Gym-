@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* GLOBAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: #ff4d00;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4d00;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.75)
+        ),
+        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: #ff4d00;
+    color: white;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e64500;
+    transform: translateY(-3px);
+}
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #bbb;
+    margin-bottom: 45px;
+}
+
+.dark-section {
+    background-color: #1c1c1c;
+}
+
+/* FITNESS PROGRAMS */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #222;
+    width: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255,77,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    color: #ff4d00;
+}
+
+.card p {
+    padding: 0 20px 25px;
+    color: #ccc;
+}
+
+/* WORKOUT PLANS */
+
+.workout-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.workout-card {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    border-left: 4px solid #ff4d00;
+    transition: 0.3s;
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
+}
+
+.workout-card h3 {
+    color: #ff4d00;
+    margin-bottom: 10px;
+}
+
+.workout-card p {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.workout-card ul {
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.workout-card li {
+    margin-bottom: 8px;
+}
+
+.rest-note {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+/* MEMBERSHIP PLANS */
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pricing-card {
+    background-color: #222;
+    width: 320px;
+    padding: 40px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.pricing-card h1 {
+    font-size: 38px;
+    color: #ff4d00;
+}
+
+.pricing-card h1 span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.pricing-card li {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.popular {
+    border: 2px solid #ff4d00;
+}
+
+/* HEALTH TIPS */
+
+.health-card {
+    background-color: #292929;
+    width: 320px;
+    padding: 35px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.health-card:hover {
+    transform: translateY(-8px);
+}
+
+.health-card h3 {
+    color: #ff4d00;
+    margin-bottom: 20px;
+}
+
+.health-card p {
+    color: #ccc;
+}
+
+/* CONTACT FORM */
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-container input,
+.contact-container textarea,
+.contact-container select {
+    width: 100%;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus,
+.contact-container select:focus {
+    border-color: #ff4d00;
+}
+
+.contact-container textarea {
+    resize: vertical;
+}
+
+.contact-container button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* BACK TO TOP BUTTON */
+
+.top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #ff4d00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.top-btn:hover {
+    background-color: #e64500;
+    transform: scale(1.1);
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .workout-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 40px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .workout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .pricing-card,
+    .health-card {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+}
